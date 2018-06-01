@@ -1,0 +1,44 @@
+数据库的创建
+ create database name charset=utf8;
+数据库的删除 
+ drop database name;
+切换数据库 
+use name
+查看当前选择的数据库
+ select database()
+表操作;
+查看当前数据库中所有表
+show tables
+创建表
+
+create table name(
+id int auto_increment primary key,
+name varchar(10) not null,
+gender bit defult 1,
+birthday datename,
+isDelete bit dafault 0 );
+
+auto_increment 表示自动增长 
+primary key 表示主键 
+查看表中内容
+ desc name;
+修改表
+alter table name add/change/drop 列名 类型
+删除表
+drop table name;
+更改表名称
+rename table 原表名 to  新表名
+查看表的创建语句
+ show create table name
+查询
+ select *from 表名
+增加
+ 全列插入:insert into 表名 values()
+ 缺省插入: insert into 表名 (列1,... )values(值,...)
+ 同时插入:insert into 表名(列1,...)valuals(值1,...)values(值2...) 
+修改表
+update 表名 set 列1 =值1,where 条件
+物理删除 
+delete from 表名 where 条件
+逻辑删除
+将isdelete值进行修改

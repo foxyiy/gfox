@@ -1,0 +1,24 @@
+数据库
+ 创建:use name
+      如果没有会创建 有则切换
+ 查看所有数据库:
+       show dbs
+ 删除当前数据库
+	db.dropDatabases()
+集合
+ 创建: 可以通过创建函数创建 也可以直接插入数据如果没有该集合就会创建
+	db.createCollection('sub',{capped:true,size:10})
+	创建 固定集合 集合空间大小为10 name为sub 超过10 时会覆盖最之前的内容
+	db.createCollection("name")
+	db.stu.insert({name:'laowang',gender:true})
+ 删除: db.name.drop()
+ 插入: 通过sava 和 insert 向集合插入文档
+	db.name.insert({name:"laowang"})
+	括号内也可以是写好的变量 test=({}) db.name.insert(test)
+ 修改
+	db.stu.update({},{},{})
+	第一个集合为查询的条件 第二个为修改的内容 第三个multi 默认为false 只修改查到的第一个 改为true修改查到的所有
+
+	db.stu.update({name:"laowang"},{$set:{name:"laomao"},{multi :true}})
+
+

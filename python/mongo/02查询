@@ -1,0 +1,47 @@
+查询
+   基本查询
+	db.name.find({符合条件文档})
+        db.name.findOne({条件文档})/只返回第一个
+	pretty() 方法 将返回结果格式化
+   比较运算符
+	小于 $lt
+	小于或等于 $lte
+	大于 $gt
+	大于或等于 $gte
+	不等于 $ne
+   逻辑运算符
+	与:默认为与或$and
+	或:$or
+		db.stu.find({$or:[{name:"laoli"},{age:{$gt:17}}}])
+		or的值为一个列表,里面的各字典元素为条件元素
+	非$not
+   范围运算符
+	$in
+	$nin
+		db.stu.find({age:{$in:[17,27,18]}})
+   支持正则表达式
+	db.stu.find(name:/^la/)
+	db.stu.find(name:{$regex:'^la'})
+   自定义查询
+	db.stu.find({$where:function(){reture this.age>18 }})
+	function函数支持js语法 可以自定义查询
+ limit(num)
+	用于读取指定数量的文档
+ skip(num)
+	跳过指定数量的文档
+	limit 与 skip 共同作用不分先后顺序
+  投影
+	用于需要显示的字段设置为1 _id 默认显示   不写的字段默认不显示
+	db.stu.find({},{name:1,age:0})
+	
+  排序
+	sort({name:1})
+		参数为 1  升序   -1 降序
+	db.stu..find().sort({name:1})
+  统计
+ count()
+ 	db.stu.count({age:{$gt:20}})
+ 	db.stu.find().count()
+  消除重复
+	db.name.distinct('去重字段',{条件})
+  	db.stu.distinct('name',{})

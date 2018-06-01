@@ -1,0 +1,27 @@
+#list 的常见操作
+list1 = [1,2,3]
+#添加
+list1.append(4)
+#在index位置插入一个元素
+list1.insert(4,5)
+#扩展列表 参数为一个可迭代对象 如元组 字典的键 集合
+list2 = list1.entend(list1)
+#删除
+
+#如果重复面的元素
+list1.remove(1)
+#删除 index元素，不写参数默认删除最后一个元素
+list1.pop(1)
+#删除整个列表或者切片
+del list1[0:3]
+del list2
+
+
+#排序
+
+#反转
+list1.reverse()
+# 排序 list.sort()sort默认有三个参数 cmp=None key=None reverse = false可制定排序规则
+#常见切片操作
+
+

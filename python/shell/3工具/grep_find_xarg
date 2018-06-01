@@ -1,0 +1,16 @@
+grep
+	使用的是基本正则
+	语法: grep   [options]   PATTERN  [FILE]
+	常用参数:
+	pattern 正则表达式
+find 
+	一般形式 find pathname -options
+	文件名可以用pattern
+
+	exec
+	   执行一个子程序
+	   find ~ -name shell exec ls {} \;
+       	   与-ok 相同 -OK 一个一个显示
+	find 用于查找文件 详细参数去百度
+xargs 
+	与exec相同 当缓冲区有内容时就会执行程序 而不是等上一个执行完后才执行

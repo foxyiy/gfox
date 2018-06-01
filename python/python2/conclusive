@@ -1,0 +1,32 @@
+创建进程的三种方式：
+
+1. linux下用fork 函数：
+   set =  os.fork()
+   if set==0:
+	执行子进程
+   else:
+     	执行父进程
+#父子进程互不影响
+
+2.通过process子类
+   from multiprocessing import Process
+class New_process(Process):
+	def run(self):
+		pass
+p=New_process(target=function)
+p.start()
+
+  通过process类
+from multipprocessing import Pross
+ 
+ p=Process(target=function)
+ p.start()
+
+#子进程不结束 主进程不会结束
+
+3. 通过进程池
+from multipprocessing Pool
+ 
+p=Pool(n)
+p.apply_async(function)
+#主进程结束子进程不在运行

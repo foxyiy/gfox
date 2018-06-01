@@ -1,0 +1,26 @@
+索引
+  索引的建立:1表示升序  -1 降序
+  联合索引:db.t1.ensureIndex({'name':1,age:1})
+  建立唯一索引:db.t1.ensureIndex({'name':1},{'unique':true})
+  查看文档所有索引:db.t1.getIndexs()
+  删除索引:db.t1.dropIndex('索引名称')
+ explain('executeionStats') 查看时间进行性能分析
+安全性
+  数据库管理
+  常用数据库角色
+	root:超级权限
+	Read:允许用户读取指定数据库
+	readWrite:允许用户读写指定数据库
+   创建超级管理用户
+	use admin;
+	db.createUser({user:'foxyi',pwd:'232429yi',roles:[{role:'root',db:'admin'}]}) 
+  修改配置文件
+	...
+   登录  mongo -u foxyi -p 232429yi --authenticationDatabases admin
+	  
+     	通常在超级管理员的数据库中创建其他用户	
+
+
+  
+
+收到了严重的打击  内容还是不完整 感觉很难处理一些问题  心情很糟糕  剩下的数据备份  复制  主从切换不在赘述    与Python交互也没啥大问题 简单的一些操作,所以也不在赘述  数据库还剩下一个很是纠结  以后有需要再看吧  现在去搞shell

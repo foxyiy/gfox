@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+    <h3>表单及其用法</h3>
+    <div>表单用于向服务器传送数据</div><br>
+    <form action="http://www.foxyi.com " method="get"><!--改为post 提交>
+        <div>
+           <!--文本域 lable 定义表表单旁数据-->
+            <!--http://www.foxyi.com/?user+name=aaa&pwd=123123&gender=on&lick=on&%E5%9C%B0%E5%8C%BA=%E4%B8%8A%E6%B5%B7-->
+            <!--lable 激活表单控件事例 常用于单选框 复选框-->
+            <label for="username">用户名:</label>
+            <input type="text" name="user name" id="username"><br>
+        </div>
+            <div>
+            <!--密码域-->
+                <br>
+            <label>密码:</label>
+            <input type="password" name="pwd">
+            </div>
+            <!--单选按钮-->
+            <div><br>
+                <label>性别</label>
+            <input type="radio" name="gender" id="man" value="0"><label for="man">男</label>
+                <input type="radio" name="gender" id="women" value="1"><label for="women">女</label>
+            </div><br>
+            <!--复选按钮-->
+            <label>爱好:</label>
+            <input type="checkbox" name="lick" value="black">篮球
+            <input type="checkbox" name="lick" value="foot">足球
+            <div><br>
+            <select name="地区">
+                <option>上海</option>
+                <option>深圳</option>
+                <option>陕西</option>
+            </select>
+        </div>
+
+        <div><br>
+            <!-- 定义发送文件-->
+            <label>上传文件:</label>
+            <input type="file" name="">
+        </div>
+        <div>
+            <!-- 多行文本域--><br>
+            <label>建议:</label>
+            <textarea></textarea>
+        </div>
+        <div>
+            <br>
+            <!--以图片为按钮提交数据-->
+           <!--    <input type="image" name="" value="" src="image/3.jpg">   -->
+            <input type="submit" name="" value="提交">
+            <input type="reset" name="" value="重置">
+        </div>
+        <div>
+            <!--不在页面显示 用于向服务器发送数据-->
+            <input type="hidden" name="hid" value="100000">
+        </div>
+    </form>
+</body>
+</html>

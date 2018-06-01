@@ -1,0 +1,4 @@
+聚合
+   常用表达式
+$sun  $avg   $min $max $first $last
+$push 在结果文档中插入值到一个数组中

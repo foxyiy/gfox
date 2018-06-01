@@ -1,0 +1,23 @@
+"""range:2直接创建一个列表 3 创建一个生成器 可通过list函数获取一个列表
+range(start,stop,step)
+map:(函数，*可迭代对象)
+例："""
+def m(x,y):
+	print("haha")
+	return(x+y)
+	x*y
+b=map(m,[1,2,3],[4,5,6])
+print(list(b))
+"""
+filter:
+对指定序列进行过滤操作
+filter(过滤函数，序列)
+reduce:
+ 对序列中的参数进行累计
+例求和和求累积
+reduce(lambda x,y:x*y,list(range(100)))
+py3中已移除， from functools import reduce
+sorted
+对列表内容排序
+sorted(列表)
+逆向排序（列表reverse=1）

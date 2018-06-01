@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素</title>
+    <style type="text/css">
+        div{
+            font-family: 微软雅黑;
+        }
+        .fon{
+            font-size: 20px;
+            text-indent: 40px;
+        }
+        .fon ul{
+            text-indent: 0px;
+        }
+        .f{
+            font-size: 0px;
+            text-align: center;
+
+            width: 800px;
+            height: 500px;
+         /*   border: 1px solid #333333;*/
+            line-height: 200px;
+            overflow:hidden;
+            margin-top: 0px;
+        }
+        .f a{
+            font-size: 20px;
+        }
+        .f iframe{
+            display: inline-block;
+            width: 800px;
+            height: 500px;
+            margin-top: 20px;
+        }
+        .inline{
+            width: 600px;
+            height: 200px;
+            border: 1px solid black;
+            overflow: auto;
+            font-size: 0px;
+            text-align: center;
+
+        }
+        .inline a{
+            display: inline-block;
+            background-color: #666666;
+            width: 200px;
+            height: 100px;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 100px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div >
+         <h1>块元素 内联元素 内联块元素</h1>
+        <div class="fon">元素就算标签 块元素 内联元素 内联块元素 是布局中常用的三种标签</div>
+        <h3>块元素</h3>
+        <div class="fon">
+            块元素也称行元素 布局中常用的标签有 div p ul h1 dh dd dt它们在布局中的行为有：
+            <ul class="li">
+                <li>支持全部样式</li>
+                <li>默认宽度为夫级宽度的100%</li>
+                <li>即使设置了宽度 盒子也占据一行</li>
+            </ul>
+        </div>
+        <h3>内联元素</h3>
+        内联元素也称行内元素 布局中常用的标签有 span a em  b strong i 他们在布局中的行为：
+        <ul class="li">
+            <li>支持部分样式 不支持width heinght margin panding的top bottom</li>
+            <li>寬高由内容决定</li>
+            <li>盒子并在一行</li>
+            <li>代码换行盒子之间产生间距</li>
+            <li>子元素是内联元素 父元素可以用text-align属性设置子元素水平对齐方式 用line-height 设置垂直对齐方式</li>
+        </ul>
+        <h3>解决内联元素去间隙的方法</h3>
+            <ol>
+                <li>去掉换行</li>
+                <li>将父级字体大小设置为0 <用子级元素设置元素大小></用子级元素设置元素大小></li>
+            </ol>
+    </div>
+
+        <div class="f">
+            <iframe src="http://www.iqiyi.com/v_19rrl7fhv0.html"></iframe>
+            <a href="#">这是一个内联元素</a>
+            <a href="#">这是一个内联元素</a>
+
+            <a href="#">这是一个内联元素</a>
+            <a href="#">这是一个内联元素</a>
+
+            <a href="#">这是一个内联元素</a>
+            <a href="#">这是一个内联元素</a>
+        </div>
+        <div class="incon">
+            <h3>内联块元素</h3>
+            内联块元素也叫行内块元素 用display将块元素和内联元素转换为这种元素它们在布局中的表现为：
+            <ul>
+                <li>支持全部样式</li>
+                <li>如果没有设置寬高 将会被文字撑开</li>
+                <li>盒子并在一起</li>
+                <li>代码换行盒子之间会产生间距</li>
+                <li>子元素是内联块元素 父元素可以用text-align属性设置子元素水平对齐方式 用line-height 设置垂直对齐方式</li>
+            </ul>
+            这三种元素都可以用display来相互转化 经常把内联元素转化为块元素 少量转化为内联块元素
+        </div>
+        <div class="disply">
+            <h3>disply属性</h3>
+            none元素隐藏且不占位置
+            <br>
+            block元素以块元素显示<br>
+            inline元素以内联元素显示<br>
+            inline-block元素以内联块元素显示
+        </div>
+        <div class="inline">
+
+            <a href="">这是一个内联块元素</a>
+            <a href="">这是一个内联块元素</a>
+            <a href="">这是一个内联块元素</a>
+            <a href="">这是一个内联块元素</a>
+            <a href="">这是一个内联块元素</a>
+        </div>
+</body>
+</html>

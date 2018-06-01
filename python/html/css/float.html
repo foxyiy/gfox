@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style type="text/css">
+        div{
+            width: 600px;
+            border: 1px solid #333333;
+            font-size: 18px;
+
+
+        }
+        .float1{
+            float:left;
+            background-color: saddlebrown;
+            height:400px;
+        }
+        .float2{
+            float:right;
+            background-color:red;
+            height: 300px;
+         }
+        .float3{
+            background-color: #333333;
+            width: 800px;
+            height: 400px;
+
+            height: 300px;
+            /*float:right;*/
+        }
+         .flo{
+            width:2000px;
+            background:blue;
+            margin-bottom:40px;
+            overflow:hidden;
+        }
+
+    </style>
+</head>
+<body>
+<div class="flo">
+    <div class="float1">
+        <ol>
+            <li>文档浮动有两种 floaty:left float:right</li>
+            <li>元素会向左向右浮动直到碰到父元素边界 浮动元素 未浮动元素才会停下来</li>
+            <li>相邻浮动元素会并在一行超出父边界会换行</li>
+            <li>浮动元素会自动转化为行内块元素</li>
+            <li>浮动元素后面没有浮动的元素会占据浮动元素的位置， 没有浮动的块内的文字会避开浮动的元素形成文字绕图效果</li>
+            <li>父元素内的元素整体浮动 无法撑开父元素需要清除浮动</li>
+            <li></li>
+        </ol>
+    </div>
+    <div class="float2"></div>
+    <div class="float3">
+       文档浮动有两种 floaty:left float:right
+    </div>
+    </div>
+</body>
+</html>

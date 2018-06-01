@@ -1,0 +1,25 @@
+视图
+将查询后的结果作为一张表储存起来便于管理
+为方便区别 视图前常以v_ 开头命名
+create view v_name as
+ select....
+
+事物
+当一件事情需要多个逻辑语句共同作用时需要事物
+事物的四大特性: 原子性 一致性 隔离性 持久性
+表的类型必须是innodb 或 dbd 
+show create table name ;查看创建语句
+更改表的类型 alter table name engain=innodb
+ 
+
+事物操作语句
+begain; 开启
+commit 提交
+rollback 回滚
+
+begain;
+update table names name="other name" where id=num;
+commit / rollback
+
+索引
+

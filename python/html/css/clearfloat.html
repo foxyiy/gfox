@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clearfloat</title>
+    <style type="text/css">
+        .clearfloat{
+            width: 600px;
+          /*  height: 200px;*/
+            background-color: #666666;
+        /*    overflow: hidden;*/
+        }
+        .clearfloat a{
+            float: left;
+            margin: 80px;
+            width: 40px;
+            height: 30px;
+            background-color: saddlebrown;
+            text-decoration: none;
+            font-size: 30px;
+            color: #333333;
+            text-align: center;
+
+        }
+      /*  .clearfix:after{
+            content: "";
+            display: table;
+            clear: both;
+        }*/
+        <!--清除浮动 清除maigintop塌陷的方法-->
+        .clearfix:before,.clearfix:after{
+            content: "";
+            display: table;
+            /*清除塌陷*/
+            }
+        .clearfix:after{
+            content: "";
+            display: table;
+            clear: both;
+            /*清除浮动*/
+        }
+        .clearfix{
+            zoom: 1;
+            /*兼容ie*/
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h3>
+            清除浮动
+        </h3>
+        当未设置父元素的高度时 父元素内的元素整体浮动 无法撑开父元素需要清除浮动
+        清除浮动的 三种方法：
+        <ul>
+            <li>父级上增加属性overflow:hideen</li>
+            <li>在最后一个元素的后面设置一个空的div 并设置clear:both属性  不推荐使用</li>
+            <li>clearfix清除</li>
+        </ul>
+    </div>
+    <div class="clearfloat clearfix">
+        <a href="#">1</a>
+        <a href="#">1</a>
+        <a href="#">1</a>
+        <a href="#">1</a>
+        <a href="#">1</a>
+        <a href="#">1</a>
+        <a href="#">1</a>
+    </div>
+</body>
+</html>

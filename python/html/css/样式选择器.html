@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>样式选择器</title>
+    <style type="text/css">
+        div{}/*标签选择*/
+        #id{
+            color: aquamarine;
+            font-size: 24px;
+            font-height: 30px;
+          background-color: darkkhaki;
+        }/*id选择器*/
+       .type{
+            color: aquamarine;
+            font-size: 24px;
+            font-height: 30px;
+        }/*类选择器 一个元素可以用多个类*/
+
+        /*对类选择里面的内容进行标签选择  层级选择器 也可以对多层中间的标签省略
+        用于对列表的设置*/
+        .type em{
+            color: black;
+            font-weight:bold;
+        }
+        /*为类伪元素选择器*/
+        /*hover 对鼠标悬停在上面的文字进行设置 */
+        .forge:hover{
+            color: brown;
+            font-size: 30px;
+        }
+        .new1,.new2,.new3{
+            color: brown;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .new1{
+            font-style: normal;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>样式选择器</h2>
+    <h3>1.标签选择器</h3>
+         <div>
+             <em>CSS提供了丰富的文档样式外观</em>，以及设置文本和背景属性的能力；允许为任何元素创建边框，以及元素边框与其他元素间的距离，以及元素边框与元素内容间的距离；允许随意改变文本的大小写方式、修饰方式以及其他页面效果。
+         </div>
+    <h3>2.id选择器</h3>
+        <div id="id">
+            CSS提供了丰富的文档样式外观，以及设置文本和背景属性的能力；允许为任何元素创建边框，以及元素边框与其他元素间的距离，以及元素边框与元素内容间的距离；允许随意改变文本的大小写方式、修饰方式以及其他页面效果。
+        </div>
+    <h3>3.类选择器</h3>
+        <div class="type">
+            <em>CSS提供了丰富的文档样式外观</em>，以及设置文本和背景属性的能力；<em>允许为任何元素创建边框</em>，以及元素边框与其他元素间的距离，以及元素边框与元素内容间的距离；允许随意改变文本的大小写方式、修饰方式以及其他页面效果。
+        </div>
+    <h3>4.层级选择器</h3>
+    <h3>5.族选择器</h3>
+        <div>
+            <ul>
+                <li class="new1">新闻标题</li>
+                <li class="new2">新闻标题</li>
+                <li class="new3">新闻标题</li>
+            </ul>
+        </div>
+    <h3>伪类伪元素选择器</h3>
+        <div class="forge" >
+            hover 对鼠标悬浮的地方的文字进行设置
+            /*before after  对前后进添加元素*/
+        </div>
+</body>
+</html>

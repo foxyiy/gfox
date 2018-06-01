@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maigin_top塌陷</title>
+    <style type="text/css">
+        .box{
+            background-color: saddlebrown;
+            width: 600px;
+            /*这种溢出隐藏会使里面溢出的内容消失*/
+           /* overflow: hidden;*/
+            /*overflow: scroll;*/
+            overflow:auto;
+            height: 300px;
+        }
+        .boxin{
+            width: 300px;
+            height: 100px;
+            background-color: rebeccapurple;
+            margin-top: 30px;
+        }
+        .clearfix :before{
+            content: "";
+            display: table;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div class="boxin">
+        当两个盒子嵌套时内部盒子的margintop会加到外部的盒子上
+            <h2>解决办法有三种</h2>
+            <h3> 1.给外部盒子加上边框</h3>
+            boder 1px soid #333
+            <h3>2.外部盒子设置overflow :hidden</h3>
+
+            <h3>3.利用伪元素</h3>
+             clearfix :before{content:"" dosply:table}
+            <h3>元素溢出</h3>
+            <div class="over">
+                overflow:hidden 隐藏溢出内容
+                overflow:scroll  隐藏内容但会显示滚动条
+                overflow:auto 如果内容被修剪会显示滚动条
+
+            </div>
+    </div>
+    </div>
+</body>
+</html>
