@@ -1,0 +1,17 @@
+import urllib.request
+import io
+#url = "http://foxyi.club"
+url = input("请输入url:")
+#url = "http://m10.music.126.net/20180618152120/a7bf52c5f45760bcff0ad392500fbbe9/ymusic/8759/0120/6c90/21882fbd6b5b5e186376811ade401d6e.mp3"
+heasers = {
+"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36"
+        }
+request = urllib.request.Request(url,headers=heasers)
+response = urllib.request.urlopen(request)
+music = response.read()
+music_name = input("请输入歌曲名称")
+music_file = "/home/foxyi/Music/CloudMusic/"+music_name+".mp3"
+print(music_file)
+f = open(music_file,'wb')
+f.write(music)
+f.close()

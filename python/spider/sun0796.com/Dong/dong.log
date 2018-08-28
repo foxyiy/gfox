@@ -1,0 +1,28 @@
+2018-08-09 14:56:25 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: Dong)
+2018-08-09 14:56:25 [scrapy.utils.log] INFO: Versions: lxml 4.2.4.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0dev0, Python 3.7.0 (default, Jul 15 2018, 10:44:58) - [GCC 8.1.1 20180531], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.3, Platform Linux-4.17.12-arch1-1-ARCH-x86_64-with-arch-Arch-Linux
+2018-08-09 14:56:25 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'Dong', 'LOG_FILE': 'dong.log', 'NEWSPIDER_MODULE': 'Dong.spiders', 'SPIDER_MODULES': ['Dong.spiders']}
+2018-08-09 14:56:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-08-09 14:56:25 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-08-09 14:56:25 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/usr/lib/python3.7/site-packages/scrapy/crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "/usr/lib/python3.7/site-packages/scrapy/crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/usr/lib/python3.7/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.downloader = downloader_cls(crawler)
+  File "/usr/lib/python3.7/site-packages/scrapy/core/downloader/__init__.py", line 88, in __init__
+    self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+  File "/usr/lib/python3.7/site-packages/scrapy/middleware.py", line 58, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/usr/lib/python3.7/site-packages/scrapy/middleware.py", line 36, in from_settings
+    mw = mwcls.from_crawler(crawler)
+  File "/home/foxyi/spider/sun0796.com/Dong/middlewares.py", line 20, in from_crawler
+    s=  cls(crawler.settings.getlist('USER_AGENTS'))
+TypeError: DongDownloaderMiddleware() takes no arguments

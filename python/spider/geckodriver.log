@@ -1,0 +1,33 @@
+1532614443019	geckodriver	INFO	geckodriver 0.21.0
+1532614443025	geckodriver	INFO	Listening on 127.0.0.1:59455
+1532614444111	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.IR7YhQfVwjeC"
+1532614445316	Marionette	INFO	Listening on port 46001
+1532614445418	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://www.kugou.com/yy/static/js/play/lib/jquery.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: chrome://browser/content/content.js, line 670: TypeError: docShell.failedChannel is null
+1532614622436	geckodriver	INFO	geckodriver 0.21.0
+1532614622440	geckodriver	INFO	Listening on 127.0.0.1:58637
+1532614623475	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.erqx3Y1n4r2j"
+1532614624705	Marionette	INFO	Listening on port 42187
+1532614624779	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534826412668	geckodriver	INFO	geckodriver 0.21.0
+1534826412695	geckodriver	INFO	Listening on 127.0.0.1:58701
+1534826413749	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.IwCXl7wS3yip"
+*** You are running in headless mode.
+1534826414869	Marionette	INFO	Listening on port 45663
+1534826414953	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://global/content/bindings/videocontrols.xml, line 280: NS_ERROR_NOT_AVAILABLE: 
+1535293864863	geckodriver	INFO	geckodriver 0.21.0
+1535293864884	geckodriver	INFO	Listening on 127.0.0.1:60091
+1535293865952	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.RcnrEAudBYct"
+*** You are running in headless mode.
+1535293867061	Marionette	INFO	Listening on port 41865
+1535293867161	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://global/content/bindings/videocontrols.xml, line 280: NS_ERROR_NOT_AVAILABLE: 
+1535341310684	geckodriver	INFO	geckodriver 0.21.0
+1535341310716	geckodriver	INFO	Listening on 127.0.0.1:38399
+1535341311710	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.e0H62Se6e0Qc"
+*** You are running in headless mode.
+1535341313143	Marionette	INFO	Listening on port 37585
+1535341313217	Marionette	WARN	TLS certificate errors will be ignored for this session
